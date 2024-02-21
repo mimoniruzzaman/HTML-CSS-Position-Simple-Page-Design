@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Psudo Class Element</title>
+  </head>
+  <style>
+    a:link {
+      color: green;
+    }
+    a:visited {
+      color: gold;
+    }
+    a:active {
+      color: deeppink;
+    }
+
+    h1::after {
+      content: "Developer";
+    }
+    h1::before {
+      content: "Developer";
+    }
+    a {
+      background-color: blue;
+    }
+    a:hover {
+      background-color: red;
+    }
+    p::first-letter {
+      font-size: 30px;
+    }
+
+    p::selection {
+      background-color: green;
+    }
+
+    span {
+      position: relative;
+    }
+    span::after {
+      content: "";
+      height: 10px;
+      width: 90px;
+      background-color: blue;
+      position: absolute;
+      bottom: 0;
+      right: 50px;
+      z-index: -1;
+    }
+  </style>
+  <body>
+    <section>
+      <h1>
+        Lorem ipsum dolor sit amet, <span>consectetur</span> adipisicing elit.
+        Natus, vero quibusdam. Qui dignissim
+      </h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores ipsum
+        consequuntur provident ducimus, consequatur harum mollitia modi nostrum
+        quidem suscipit.
+      </p>
+      <a href="#">Lrarn More</a>
+    </section>
+  </body>
+</html>
